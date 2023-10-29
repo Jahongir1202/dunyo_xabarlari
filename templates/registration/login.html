@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Bosh sahifa{% endblock title %}
+{% block content %}
+    <h2>saytga kirish</h2>
+    <form method="post" >{%csrf_token%}
+            {{form|crispy}}
+            <button type="submit" class="btn btn-primary"> kirish </button>
+         <a class="btn btn-outline-danger" href="{% url 'password_reset'  %}" role="button">Kalit so'zni tiklash</a>
+    </form>
+
+{% endblock content%}
