@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 from environs import Env
+import dj_database_url
 
 env = Env()
 env.read_env()
@@ -84,7 +85,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    "default":env.dj_db_url("DATABASE_URL")
+    'default': dj_database_url.config("DATABASE_URL")
 
 }
 
