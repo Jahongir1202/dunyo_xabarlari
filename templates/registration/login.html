@@ -5,7 +5,7 @@
     <h2>saytga kirish</h2>
     <form method="post" >{%csrf_token%}
             {{form|crispy}}
-            <button type="submit" class="btn btn-primary"> kirish </button>
+            <button style="background-color: brown;" type="submit" class="btn btn-primary"> kirish </button>
          <a class="btn btn-outline-danger" href="{% url 'password_reset'  %}" role="button">Kalit so'zni tiklash</a>
     </form>
 

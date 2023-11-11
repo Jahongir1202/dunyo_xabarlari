@@ -1,22 +1,22 @@
+# accounts/admin.py
+
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
+from django.urls import reverse
+from django.utils.html import format_html
 from .models import CustomUser
-from .forms import CustomUserCreationForm, CustomUserChangeForm
+from .views import export_users_excel
+from django.contrib.auth.models import User
 
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 
 class CustomUserAdmin(UserAdmin):
-    add_form = CustomUserCreationForm
-    form = CustomUserChangeForm
     model = CustomUser
-    list_display = ['username', 'first_name', 'email', 'age']
-    fieldsets = UserAdmin.fieldsets + (
-        (None, {'fields': ('age',)}),
-    )
-    add_fieldsets = UserAdmin.add_fieldsets + (
-        (None, {'fields': ('age',)}),
-    )
+    list_display = ['username', 'email', 'phone_number', 'date_joined']
+
+
+
 
 
 admin.site.register(CustomUser, CustomUserAdmin)
-
-# Register your models here.
