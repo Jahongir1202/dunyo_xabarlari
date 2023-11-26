@@ -1,10 +1,10 @@
 {%extends 'base.html'%}
 {% load crispy_forms_tags %}
     {% block content%}
-        <h1> Royxatdan otish</h1>
+        <h1 > Royxatdan otish</h1>
         <form method="post" >{%csrf_token%}
             {{form|crispy}}
-            <button type="submit" class="btn btn-primary">yuborish</button>
+            <button style="background-color: brown;" type="submit" class="btn btn-primary">yuborish</button>
         </form>
 
 
