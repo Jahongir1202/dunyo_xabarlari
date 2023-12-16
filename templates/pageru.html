@@ -1,0 +1,914 @@
+{% load static %} {% load i18n %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <link style="position: relative;border-radius: 50%;" rel="icon" href="{% static 'images/photo_6_2023-12-06_14-41-53.jpg' %}" type="image/gif" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Hostit</title>
+
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- font awesome style -->
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <div class="hero_area">
+        <!-- header section strats -->
+        <header class="header_section">
+            <div class="container-fluid">
+                <nav style="z-index: 3;" class="navbar navbar-expand-lg custom_nav-container ">
+                    <a class="navbar-brand" href="index.html">
+                        <span>PROP ALGO TRADING</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                         <span class=""> </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                        <div class="quote_btn-container">
+                            <a href="">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <span>
+                                Call : +998 (99) 844 67 41  +998 (99) 814 42 48
+                            </span>
+                            </a>
+                            <a style=" position: relative; left: 100px; font-size: 50px;" href="https://t.me/propalgotrading">
+                                <i style="color: rgb(95, 255, 80);" class="fa fa-telegram"></i>
+                            </a>
+                            <a style="left: 120px; position: relative; font-size: 50px;" href="https://instagram.com/prop_algo_trading">
+                                <i style="background-image: linear-gradient(to top  right, #ddec0b  , blue 10%, #8b0505); border-radius: 20%; height: 45px; " class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a style="left: 190px; margin-left: 20px; position: relative; font-size: 30px;" href="{% url 'pageuz' %}">
+                                <i class="fa fa-uz" aria-hidden="true">🇺🇿</i>
+                            </a>
+                            <a style="left: 190px; margin-left: 20px; position: relative; font-size: 30px;" href="{%url 'pageru'%}">
+                                <i class="fa fa-ru" aria-hidden="true">🇷🇺</i>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </nav>
+                <style>
+                    .page_insert {
+                        top: 10px;
+                        width: 100%;
+                        position: relative;
+                        display: inline-block;
+                        height: 1000px;
+                        background-image: linear-gradient(to right blue, red);
+                        border-radius: 30px;
+                        box-shadow: 10px 10px 12px rgb(108, 110, 110) inset;
+                    }
+                    /* .page_insert {
+                    width: 100%;
+                    position: relative;
+                    height: 700px;
+                    background-color: mintcream;
+                    border-radius: 30px;
+                    box-shadow: 10px -10px 12px rgb(247, 250, 250) inset;
+                }
+                
+                @media screen and (max-width: 768px) {
+                    .page_insert {
+                        height: 1000px;
+                    }
+                } */
+                    
+                    .page_imgbac {
+                        position: relative;
+                        z-index: 2;
+                    }
+                    
+                    .page_img2 {
+                        position: absolute;
+                        top: -200px;
+                        width: 60%;
+                        left: 0px;
+                    }
+                    
+                    .page_text1 {
+                        position: relative;
+                        z-index: 3;
+                        display: inline-block;
+                        color: rgb(14, 14, 119);
+                        width: 30%;
+                        margin: 10px 10px;
+                        top: 0px;
+                    }
+                    
+                    .text1_p {
+                        position: relative;
+                        top: 14px;
+                    }
+                    
+                    .p1_bac {
+                        position: relative;
+                        font-size: 18px;
+                    }
+                    
+                    .p1_bac_h4 {
+                        color: rgb(113, 0, 128)
+                    }
+                    
+                    .page_sale {
+                        position: relative;
+                        z-index: 3;
+                        display: inline-block;
+                        top: 0px;
+                        left: 65px;
+                        width: 23%;
+                    }
+                    
+                    .sale_h3 {
+                        color: rgb(199, 97, 1);
+                    }
+                    
+                    .sale_h4 {
+                        color: rgb(199, 24, 1);
+                    }
+                    
+                    .sale_p {
+                        position: relative;
+                        font-size: 15px;
+                    }
+                    
+                    .sale__ph3 {
+                        color: rgb(25, 2, 139)
+                    }
+                    
+                    .page_servis {
+                        position: relative;
+                        z-index: 4;
+                        display: inline-block;
+                        top: -400px;
+                        left: 730px;
+                    }
+                    
+                    .servis_text1 {
+                        position: relative;
+                        top: -100px;
+                        left: -20px;
+                    }
+                    
+                    .servis_h4 {
+                        color: rgb(90, 19, 90);
+                    }
+                    
+                    .servis_text1 {
+                        position: relative;
+                        margin-left: 50px;
+                        top: 0px;
+                    }
+                    
+                    .servis_p {
+                        position: relative;
+                        font-size: 18px;
+                    }
+                    
+                    .servis_ph4 {
+                        color: rgb(4, 128, 0);
+                    }
+                    
+                    .page_logo {
+                        position: relative;
+                        z-index: 3;
+                        display: block;
+                        text-align: center;
+                        top: -300px;
+                    }
+                    
+                    .logo_h2 {
+                        position: relative;
+                        width: 300px;
+                        top: 0px;
+                        left: 0px;
+                        color: rgb(245, 241, 241);
+                        background-color: rgb(202, 7, 7);
+                        border-radius: 20px;
+                        box-shadow: -6px -6px 6px 6px rgb(69, 5, 196);
+                    }
+                    
+                    .logo_conter {
+                        position: relative;
+                        margin: 7px 10px;
+                        top: 0px;
+                        display: inline-block
+                    }
+                    
+                    .logo_img {
+                        position: relative;
+                        border-radius: 50%;
+                        width: 100px;
+                        height: 100px;
+                    }
+                    
+                    .logo_img1 {
+                        position: relative;
+                        /* border-radius: 50%; */
+                        width: 170px;
+                        height: 70px;
+                    }
+                    
+                    .logo_link {
+                        position: relative;
+                        left: -10px;
+                    }
+                    
+                    .logo_link_text {
+                        color: rgb(2, 2, 70);
+                    }
+                    
+                    .page_insert {
+                        width: 100%;
+                        position: relative;
+                        height: 700px;
+                        background-color: lightgray;
+                        border-radius: 30px;
+                        box-shadow: 10px -10px 12px rgb(247, 250, 250) inset;
+                    }
+                    
+                    @media screen and (max-width: 1008px) {
+                        .page_img2 {
+                            width: 100%;
+                        }
+                        .page_insert {
+                            height: 1000px;
+                        }
+                        .page_text1 {
+                            width: 95%;
+                            top: 10px;
+                            position: relative;
+                        }
+                        .page_text1_h3 {
+                            font-size: 20px;
+                        }
+                        .p1_bac_h4 {
+                            font-size: 20px;
+                        }
+                        .page_sale {
+                            width: 95%;
+                            left: 0px;
+                        }
+                        .sale_h3 {
+                            font-size: 20px;
+                        }
+                        .sale_h4 {
+                            font-size: 20px;
+                        }
+                        .sale__ph3 {
+                            font-size: 20px;
+                            margin: 0;
+                        }
+                        .page_servis {
+                            position: relative;
+                            display: block;
+                            top: 0px;
+                            left: 0px;
+                        }
+                        .servis_h4 {
+                            font-size: 20px;
+                        }
+                        .servis_ph4 {
+                            font-size: 25px;
+                        }
+                        .logo_link_text {
+                            color: aliceblue;
+                        }
+                        .page_logo {
+                            position: relative;
+                            top: 0px;
+                        }
+                    }
+                </style>
+                <div class="page_insert">
+                    <div class="page_sfera"></div>
+                    <div class="page_sferablue"></div>
+                    <div class="page_imgbac"><img class="page_img2" src="/static/images/dollor3.png" alt=""></div>
+                    <div class="page_text1">
+                        <h3 class="page_text1_h3">От проп-компаний, чтобы выиграть экзамены и внедрить услугу аренды роботов.</h3>
+                        <div class="text1_p">
+                            <div>
+                                <p class="p1_bac">
+                                    <h4 class="p1_bac_h4"><i class="fa fa-check-square" aria-hidden="true"></i> Трейдер сам покупает номер проп-счета</h3>
+                                </p>
+                            </div>
+                            <div>
+                                <p class="p1_bac">
+                                    <h4 class="p1_bac_h4"><i class="fa fa-check-square" aria-hidden="true"></i>Вы можете получить баланс до $1 миллиона </h4>
+                                </p>
+                            </div>
+                            <div>
+                                <p class="p1_bac">
+                                    <h4 class="p1_bac_h4"><i class="fa fa-check-square" aria-hidden="true"></i> Робот можно использовать в реальном балансе!</h4>
+                                </p>
+                            </div>
+                            <div>
+                                <p class="p1_bac">
+                                    <h4 class="p1_bac_h4"><i class="fa fa-check-square" aria-hidden="true"></i> Заработок рассчитывается без проблем</h4>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page_sale">
+                        <div>
+                            <h3 class="sale_h3">
+                                Стоимость сдачи экзаменов:
+                            </h3>
+                            <h4 class="sale_h4">Срок доставки от 1 до 10 дней гарантирован на 100%!</h4>
+
+                        </div>
+                        <p class="sale_p"> <b>   <h3 class="sale__ph3"  >50K - 100$ </h3></b>
+                            <!-- <i class="fa fa-money" aria-hidden="true"></i>> <b>   <h3>50K - 100$ </h3></b> -->
+                        </p>
+                        <p class="sale_p" olor:rgb(4, 128, 0);></p> <b>  <h3 class="sale__ph3 " ><b>100K - 200$ </h3></b>
+                        <!-- <i class="fa fa-money " aria-hidden="true "></i >   <b>  100K - 200$ </b> -->
+                        </p>
+                        <p class="sale_p " olor:rgb(4, 128, 0)><b>  <h3 class="sale__ph3"> 200K - 300$ </h3> </b>
+                            <!-- <i class="fa fa-money" aria-hidden="true"></i >   <b>  200K - 300$ </b> -->
+                        </p>
+                        <p class="sale_p" olor:rgb(25, 2, 139);><b> <h3 class="sale__ph3 " >300K - 400$ </h3></b>
+                            <!-- <i class="fa fa-money " aria-hidden="true "></i >   <b>  300K - 400$ </b> -->
+                        </p>
+                        <p class="sale_p " olor:rgb(0, 0, 0);><b>  <h3 class="sale__ph3"> 400K - 500$ </h3></b>
+                            <!-- <i class="fa fa-money" aria-hidden="true"></i >   <b>  <h3>500K - 600$</h2> </b> -->
+                        </p>
+                        <p class="sale_p " olor:rgb(0, 0, 0);><b>  <h3 class="sale__ph3"> 500K - 600$ </h3></b>
+                            <!-- <i class="fa fa-money" aria-hidden="true"></i >   <b>  <h3>500K - 600$</h2> </b> -->
+                        </p>
+
+
+                    </div>
+                    <div class="page_servis">
+                        <div class="servis_text1">
+                            <h4 class="servis_h4">
+                                🔥Мы предоставляем услуги
+                            </h4>
+
+                        </div>
+                        <div class="servis_text1">
+
+                            <p class="servis_p">
+                                <h4 class="servis_ph4"><i class="fa fa-tag " aria-hidden="true "></i> При регистрации</h4>
+                            </p>
+                            <p class="servis_p">
+                                <h4 class="servis_ph4"> <i class="fa fa-tag" aria-hidden="true"></i> При проверке</h4>
+                            </p>
+                            <p class="servis_p">
+                                <h4 class="servis_ph4 "><i class=" fa fa-tag " aria-hidden="true "></i>При выпуске доходов, находящихся в реальном балансе</h4>
+                            </p>
+                            <p class="servis_p ">
+                                <h4 class="servis_ph4 "> <i class="fa fa-tag " aria-hidden="true "></i> Пропорциональные номера аккаунтов со скидкой до 35%</h4>
+                            </p>
+                            <p class="servis_p">
+                                <h4 class="servis_ph4 "><i class=" fa fa-tag "></i>Пожизненная поддержка.</h4>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="page_logo">
+                        <h2 class="logo_h2"> Регистрация через сайты</h2>
+                        <div class="logo_conter">
+                            <a href="https://msolutionff.com/ref/372/"> <img class="logo_img" src="/static/images/photo_1_2023-12-06_14-41-53.jpg " alt=" ">
+                            </a>
+                            <!-- <img class="logo_img" src="/static/images/photo_1_2023-12-06_14-41-53.jpg " alt=" "> -->
+                            <div class="logo_link">
+                                <a class="logo_link_text" href="https://msolutionff.com/ref/372/"> <b>Msolutionff</b></a>
+                            </div>
+                        </div>
+                        <div class="logo_conter">
+                            <a href=""> <img class="logo_img" src="/static/images/photo_2_2023-12-06_14-41-53.jpg " alt=" ">
+                            </a>
+                            <!-- <img class="logo_img" src="/static/images/photo_2_2023-12-06_14-41-53.jpg " alt=" "> -->
+                            <div class="logo_link">
+                                <a class="logo_link_text" href=" "> <b>M D P</b></a>
+                            </div>
+                        </div>
+                        <div class="logo_conter">
+                            <a href="https://trading.infinityforexfunds.com/#a_aid=6571986c45b8d"> <img class="logo_img" src="/static/images/photo_3_2023-12-06_14-41-53.jpg " alt=" ">
+                            </a>
+                            <!-- <img class="logo_img" src="/static/images/photo_3_2023-12-06_14-41-53.jpg " alt=" "> -->
+                            <div class="logo_link">
+                                <a class="logo_link_text" href="https://trading.infinityforexfunds.com/#a_aid=6571986c45b8d"> <b>INFINITY</b></a>
+                            </div>
+                        </div>
+                        <div class="logo_conter">
+                            <a href="https://trueforexfunds.com/#a_aid=84099"> <img class="logo_img" src="/static/images/photo_6_2023-12-06_14-41-53.jpg " alt=" ">
+                            </a>
+                            <!-- <img class="logo_img" src="/static/images/photo_6_2023-12-06_14-41-53.jpg " alt=" "> -->
+                            <div class="logo_link">
+                                <a class="logo_link_text" href="https://trueforexfunds.com/#a_aid=84099"> <b>Funding Forex Traders </b></a>
+                            </div>
+                        </div>
+                        <div class="logo_conter">
+                            <a href="https://trading.quantectrading.com/shop/#a_aid=shuhfay"> <img class="logo_img" src="/static/images/photo_4_2023-12-06_14-41-53.jpg " alt=" ">
+                            </a>
+                            <!-- <img class="logo_img" src="/static/images/photo_4_2023-12-06_14-41-53.jpg " alt=" "> -->
+                            <div class="logo_link">
+                                <a class="logo_link_text" href="https://trading.quantectrading.com/shop/#a_aid=shuhfay"> <b>QUANTECT </b></a>
+                            </div>
+                        </div>
+                        <div class="logo_conter">
+                            <a href="https://kortanafx.com/?linkId=lp_737338&sourceId=shuhrat-fayziyev&tenantId=kortanafx&affS1=YOUR_VALUE"> <img class="logo_img1" src="/static/images/photo_5_2023-12-06_14-41-53.jpg " alt=" ">
+                            </a>
+                            <!-- <img class="logo_img1" src="/static/images/photo_5_2023-12-06_14-41-53.jpg " alt=" "> -->
+                            <div class="logo_link">
+                                <a class="logo_link_text" href="https://kortanafx.com/?linkId=lp_737338&sourceId=shuhrat-fayziyev&tenantId=kortanafx&affS1=YOUR_VALUE"><b>KORTANA</b></a>
+                            </div>
+                        </div>
+                        <div class="logo_conter">
+                            <a href=""> <img class="logo_img" src="/static/images/photo_7_2023-12-06_14-41-53.jpg " alt=" ">
+                            </a>
+                            <!-- <img class="logo_img" src="/static/images/photo_7_2023-12-06_14-41-53.jpg " alt=" "> -->
+                            <div class="logo_link">
+                                <b>PROP ALGO TRADING</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </header>
+
+        <!-- end header section -->
+        <!-- slider section -->
+        <section class="slider_section ">
+            <div id="customCarousel1 " class="carousel slide " data-ride="carousel ">
+                <div class="carousel-inner ">
+                    <div class="carousel-item active ">
+                        <div class="container ">
+                            <div class="row ">
+                                <div class="col-md-6 ">
+                                    <div class="detail-box ">
+                                        <h1>
+                                            Мы предлагаем Вам безопасную и эффективную торговлю </h1>
+                                        <p>
+                                            Торговать на финансовых рынках всегда проще, если рядом с вами есть кто-то, кто знает о них все. Мы предоставляем доступ к качественным инструментам и услугам, которые помогают клиентам достичь своих финансовых целей. мы даем
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <div class="row ">
+                                        <div class=" col-lg-10 mx-auto ">
+                                            <div class="img-box ">
+                                                <img src="{% static 'images/slider-img.png' %} " alt=" ">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="container ">
+                            <div class="row ">
+                                <div class="col-md-6 ">
+                                    <div class="detail-box ">
+                                        <h1>
+                                            АВТО ТОРГОВЛЯ! </h1>
+                                        <p>
+                                            Полностью автоматизированный инструмент, который самостоятельно управляет капиталом и показывает доходность до 50% в месяц!
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <div class="row ">
+                                        <div class=" col-lg-10 mx-auto ">
+                                            <div class="img-box ">
+                                                <img src="{% static 'images/businessman-shake-hand-with-robot-isolated-white-background_881868-2638-removebg-preview.png' %} " alt=" ">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="container ">
+                            <div class="row ">
+                                <div class="col-md-6 ">
+                                    <div class="detail-box ">
+                                        <h1>
+                                            Сделки с Форекс дилером </h1>
+                                        <p>
+                                            Изучая эту программу, вы получите четкое представление о рынке Форекс, его преимуществах и рисках. Базовые знания, необходимые для работы с Форекс-дилерами, имеющими лицензию в соответствии с законодательством РФ. у тебя будет </div>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <div class="row ">
+                                        <div class=" col-lg-10 mx-auto ">
+                                            <div class="img-box ">
+                                                <img src="{% static 'images/robotall.jpg' %} " alt=" ">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="carousel_btn-box ">
+                    <a class="carousel-control-prev " href="#customCarousel1 " role="button " data-slide="prev ">
+                        <i class="fa fa-angle-left " aria-hidden="true "></i>
+                        <span class="sr-only ">Previous</span>
+                    </a>
+                    <a class="carousel-control-next " href="#customCarousel1 " role="button " data-slide="next ">
+                        <i class="fa fa-angle-right " aria-hidden="true "></i>
+                        <span class="sr-only ">Next</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- end slider section -->
+        </div>
+
+        <!-- service section -->
+
+        <section class="service_section layout_padding ">
+            <div class="container ">
+                <div class="heading_container heading_center ">
+                    <h2>
+
+                    </h2>
+                </div>
+            </div>
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-md-6 col-lg-4 ">
+                        <div class="box ">
+                            <div class="img-box ">
+                                <img src="{% static 'images/s1.png' %} " alt=" ">
+                            </div>
+                            <div class="detail-box ">
+
+                                <p>
+                                    Правильная точка входа и выхода из торговли. Не упустите хорошее время для зарабатывания денег </p> <a href=" ">
+                Read More
+                <i class="fa fa-long-arrow-right " aria-hidden="true "></i>
+
+              </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 ">
+                        <div class="box ">
+                            <div class="img-box ">
+                                <img src="{% static 'images/s2.png'%} " alt=" ">
+                            </div>
+                            <div class="detail-box ">
+
+                                <p>
+                                    Отсутствие эмоций, влияющих на результат. Алгоритм не знает боли сомнений и переживаний</p> <a href=" ">
+                Read More
+                <i class="fa fa-long-arrow-right " aria-hidden="true "></i>
+
+              </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 ">
+                        <div class="box ">
+                            <div class="img-box ">
+                                <img src="{% static 'images/s3.png'%} " alt=" ">
+                            </div>
+                            <div class="detail-box ">
+
+                                <p>
+                                    График работы 24 часа в сутки, без перерывов на обед и сон </p> <a href=" ">
+                Read More
+                <i class="fa fa-long-arrow-right " aria-hidden="true "></i>
+
+              </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 ">
+                        <div class="box ">
+                            <div class="img-box ">
+                                <img src="{% static 'images/s4.png'%} " alt=" ">
+                            </div>
+                            <div class="detail-box ">
+
+                                <p>
+                                    Простые настройки. Выбирайте комфортный уровень риска и размер лота. Алгоритм сделает все остальное </p> <a href=" ">
+                Read More
+                <i class="fa fa-long-arrow-right " aria-hidden="true "></i>
+
+              </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 ">
+                        <div class="box ">
+                            <div class="img-box ">
+                                <img src="{% static 'images/s5.png'%} " alt=" ">
+                            </div>
+                            <div class="detail-box ">
+
+                                <p>
+                                    Бесплатно Просто свяжитесь с нами, и вы получите доступ к уникальному инструменту </p> <a href=" ">
+                Read More
+                <i class="fa fa-long-arrow-right " aria-hidden="true "></i>
+
+              </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+    </div>
+    </div>
+    </section>
+
+    <!-- end service section -->
+
+    <!-- about section -->
+
+    <section class="about_section layout_padding-bottom ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-6 ">
+                    <div class="detail-box ">
+                        <div class="heading_container ">
+                            <h2>
+                                2 шага для подключения алгоритма </h2>
+                        </div>
+                        <p>
+                            <b>1)</b> установите, следуя инструкциям нашей службы поддержки <br><b>2)</b> зарабатывайте с помощью автоматической торговли </p>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="img-box ">
+                        <img src="{% static 'images/download (1).jpeg'%} " alt=" ">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- end about section -->
+
+
+    <!-- server section -->
+
+    <section class="server_section ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-6 ">
+                    <div class="img-box ">
+                        <img style="width: 400px; " src="{% static 'images/pexels-pavel-danilyuk-8294558.jpg'%} " alt=" ">
+
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="detail-box ">
+                        <div class="heading_container ">
+                            <h2>
+                                для кого это подходит? </h2>
+                            <p>
+                                <h3>01.</h3>Для новичков, когда недостаточно знаний и опыта для самостоятельной работы</p>
+                            <р>
+                                <h3>02.</h3> Для трейдеров, у которых нет времени или которые считают сложным анализ рынка</p>
+                                <р>
+                                    <h3>03.</h3> Использование передовых инструментов для увеличения прибыли опытных трейдеров </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end server section -->
+
+
+    <!-- client section -->
+    <section class="client_section ">
+        <div class="container ">
+            <div class="heading_container heading_center ">
+
+            </div>
+        </div>
+        <div class="container px-0 ">
+            <div id="customCarousel2 " class="carousel slide " data-ride="carousel ">
+                <div class="carousel-inner ">
+                    <div class="carousel-item active ">
+                        <div class="container ">
+                            <div class="row ">
+                                <div class="col-md-10 mx-auto ">
+                                    <div class="box ">
+                                        <div class="img-box ">
+                                            <img src="images/client.jpg " alt=" ">
+                                        </div>
+                                        <div class="detail-box ">
+                                            <div class="client_info ">
+                                                <div class="client_name ">
+                                                    <h5>
+                                                        Marat Gazizov
+                                                    </h5>
+                                                    <h6>
+                                                        Авторская торговая система – основной принцип </h6>
+                                                </div>
+                                                <i class="fa fa-quote-left " aria-hidden="true "></i>
+                                            </div>
+                                            <p>
+                                                Система Основного Принципа основана на простых и надежных правилах технического анализа. Это оригинальное решение для легкого заработка, подходящее как опытным трейдерам, так и новичкам. Выбирая Core, вы сможете принимать эффективные решения на рынке.
+                                                вы используете проверенные инструменты и стратегии, которые помогают.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="container ">
+                            <div class="row ">
+                                <div class="col-md-10 mx-auto ">
+                                    <div class="box ">
+                                        <div class="img-box ">
+                                            <img src="images/client.jpg " alt=" ">
+                                        </div>
+                                        <div class="detail-box ">
+                                            <div class="client_info ">
+                                                <div class="client_name ">
+                                                    <h5>
+                                                        Aleksey Ershov </h5>
+                                                    <h6>
+                                                        Продвинутый курс технического анализа </h6>
+                                                </div>
+                                                <i class="fa fa-quote-left " aria-hidden="true "></i>
+                                            </div>
+                                            <p>
+                                                Этот курс поможет вам значительно расширить свои инструменты для работы с различными торговыми инструментами на финансовых рынках. Начиная с валютных пар на рынке Форекс и заканчивая фьючерсными контрактами на Московской бирже. Курс Автор научит вас тонкостям
+                                                технического и фундаментального анализа, а также поможет разобраться в сложных торговых стратегиях.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="container ">
+                            <div class="row ">
+                                <div class="col-md-10 mx-auto ">
+                                    <div class="box ">
+                                        <div class="img-box ">
+                                            <img src="images/client.jpg " alt=" ">
+                                        </div>
+                                        <div class="detail-box ">
+                                            <div class="client_info ">
+                                                <div class="client_name ">
+                                                    <h5>
+                                                        Aleksandr Bazylev
+                                                    </h5>
+                                                    <h6>
+                                                        Объективный анализ - собственная торговая система BTrade </h6>
+                                                </div>
+                                                <i class="fa fa-quote-left " aria-hidden="true "></i>
+                                            </div>
+                                            <p>
+                                                Торговая система BTrade основана на объективных рыночных данных и неоднократно проверена независимым мониторингом. BTrade позволяет трейдерам получать сигналы входа и выхода из рынка с высокой точностью. Система присутствует на разных рынках и может использоваться
+                                                с течением времени. Если вы заинтересованы в улучшении своих показателей на рынке, то BTrade — правильный выбор для вас.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel_btn-box ">
+                    <a class="carousel-control-prev " href="#customCarousel2 " role="button " data-slide="prev ">
+                        <i class="fa fa-angle-left " aria-hidden="true "></i>
+                        <span class="sr-only ">Previous</span>
+                    </a>
+                    <a class="carousel-control-next " href="#customCarousel2 " role="button " data-slide="next ">
+                        <i class="fa fa-angle-right " aria-hidden="true "></i>
+                        <span class="sr-only ">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end client section -->
+
+
+    <!-- end contact section -->
+
+    <!-- info section -->
+
+    <section class="info_section layout_padding2 ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-3 ">
+                    <div class="info_contact ">
+                        <h4>
+                            Address
+                        </h4>
+                        <div class="contact_link_box ">
+                            <a href="https://www.google.com/maps/search/beruniy+metro/@41.3439316,69.2077722,20z?entry=ttu ">
+                                <i class="fa fa-map-marker " aria-hidden="true "></i>
+                                <span>
+                  Location
+                </span>
+                            </a>
+                            <a href=" ">
+                                <i class="fa fa-phone " aria-hidden="true "></i>
+                                <span>
+                  Call+998 (99) 844 67 41  +998 (99) 814 42 48
+                </span>
+                            </a>
+                            <a href=" ">
+                                <i class="fa fa-envelope " aria-hidden="true "></i>
+                                <span>
+                  demo@gmail.com
+                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <div class="info_social ">
+                        <a href=" ">
+                            <i class="fa fa-facebook " aria-hidden="true "></i>
+                        </a>
+                        <a href=" ">
+                            <i class="fa fa-twitter " aria-hidden="true "></i>
+                        </a>
+                        <a href=" ">
+                            <i class="fa fa-linkedin " aria-hidden="true "></i>
+                        </a>
+                        <a href=" ">
+                            <i class="fa fa-instagram " aria-hidden="true "></i>
+                        </a>
+                    </div> -->
+                </div>
+
+                <div class="col-md-3 ">
+                    <div class="info_detail ">
+                        <h4>
+                            Info
+                        </h4>
+                        <p>
+                            necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-0 ">
+                    <h4>
+                        Subscribe
+                    </h4>
+                    <form action="# ">
+                        <input type="text " placeholder="Enter email " />
+                        <button type="submit ">
+              Subscribe
+            </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end info section -->
+
+
+    <!-- footer section -->
+    <footer class="footer_section ">
+
+    </footer>
+
+    <!-- footer section -->
+
+    <!-- jQery -->
+    <script src="{% static 'js/jquery-3.4.1.min.js' %} "></script>
+    <!-- bootstrap js -->
+    <script src="{% static 'js/bootstrap.js' %} "></script>
+    <!-- custom js -->
+    <script src="{% static 'js/custom.js' %} "></script>
+
+
+</body>
+
+</html>
